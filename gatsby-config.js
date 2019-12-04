@@ -1,10 +1,10 @@
 module.exports = {
   pathPrefix: "/blog",
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Jason Forest`,
-    description: `My blog. At least an attempt...`,
-    siteUrl: `https://kylir.github.io/blog/`,
+    title: `From Dev to Head`,
+    author: `Jason`,
+    description: `I'm a developer starting a new job as Head... Follow my journey!`,
+    siteUrl: `http://fromdevtohead.net`,
     social: {
       twitter: `JasonForest`,
     },
@@ -24,6 +24,7 @@ module.exports = {
         name: `assets`,
       },
     },
+    
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -40,7 +41,13 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases:{sh: "bash", js:"javascript"},
+              showLineNumbers: true,
+            }
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
@@ -48,12 +55,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -64,7 +65,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        
       },
     },
     `gatsby-plugin-offline`,

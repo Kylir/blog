@@ -1,3 +1,7 @@
 # My blog
 
-TODO: write some content...
+## To Do
+
+- Profile pic
+- Clean up fake posts
+- Document build process
